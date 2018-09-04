@@ -29,5 +29,8 @@ def multiroll(*args):
 if __name__ == "__main__":
     arg_slice = sys.argv[1:]
     output = multiroll(*arg_slice)
-    print("Total:", output["total"])
-    print("List:", output["list"])
+    try:
+        print("Total:", output["total"])
+        print("List:", output["list"])
+    except:
+        print(output)
